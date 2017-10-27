@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html";
+	charset=utf-8">
+<title>Contact</title>
+
+
+
+<style type="text/css">
+	html{
+	background-color: #999;
+}
+#form-wrap{
+	width: 1000px;
+	height: 1000px;
+	border: 5px solid #ccc;
+	background-color: #afc8de;
+	margin: 50px auto;
+	padding: 20px 0;
+}
+form{
+	width: 975px;
+	height: 900px;
+	margin: 10px;
+	padding: 20px 0;
+}
+label{
+	display: block;
+	margin: 5px 0 5px 20px;
+	font: 18px sans-serif;
+	color: #888;
+
+}
+input{
+	width: 800px;
+	height: 100px;
+	margin: 0 0 0 20px;
+	font-size: 50px;
+}
+fieldset{
+	border: none;
+	background-color: #f6f6f6;
+	padding: 0 0 20px 0;
+}
+.labelone{
+	margin-top: 10px;
+}
+.btn{
+	width: 125px;
+}
+
+button{
+	width: 250px;
+	height: 50px;
+	margin: 0 0 0 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<div id="form-wrap" class="container" size="100%">
+	<form>
+		<fieldset>
+			<center>
+			<h4>Contact Me:</h4>
+		<label>Name: &nbsp; &nbsp; <input name="name" type="text" id="name" /></label><br>
+		<label>Number:  <input name="number" type="number" id="num" /></label> 
+		<br>
+		<label>Email: &nbsp; &nbsp; <input name="email" type="text" id="email" /></label>
+		<br>
+		<label>Address: <input name="address" type="text" id="add" /> </label><br>
+
+				<a href="jsm.html"><button type="button" onclick="salba()">SAVE</button></a><br><br>
+   				<button type="button" onclick="bura()" id="clearAll">RESET</button> 
+				<button type="button" onclick="balik()">RETRIEVE</button><br><br>
+				<a href="index.html"><button type="button">EXIT</button></a>
+
+			</center></fieldset>
+
+		</form>
+
+	</div>
+
+<script>
+
+ 
+
+function salba()
+{
+
+window.localStorage['name'] = document.getElementById('name').value;
+window.localStorage['num'] = document.getElementById('num').value;
+window.localStorage['email'] = document.getElementById('email').value;
+window.localStorage['add'] = document.getElementById('add').value;
+
+
+
+}
+
+
+function bura(){
+    document.getElementById('name').value=null
+    document.getElementById('num').value=null
+    document.getElementById('email').value=null
+    document.getElementById('add').value=null
+}
+
+
+function balik(){
+	
+	document.getElementById('name').value = window.localStorage['name'];
+	document.getElementById('num').value = window.localStorage['num'];
+	document.getElementById('email').value = window.localStorage['email'];
+	document.getElementById('add').value = window.localStorage['add'];
+
+}
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

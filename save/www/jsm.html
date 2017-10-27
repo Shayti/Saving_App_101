@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts</title>
+
+<style type="text/css">
+
+  
+
+input{
+
+    width: 500px;
+    height: 100px;
+    font-size: 50px;
+}
+
+
+</style>
+
+</head>
+<body background="img\memo2.jpg" style="background-repeat: no-repeat; background-size: 107%">
+<br><BR><br><BR><BR><br><BR><br><BR> <br><BR>
+<div id="form-wrap" class="container" size="100%">
+<center><br><br><h1><font face="Algerian">CONTACTS</font></h1><br><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input readonly="true" id="name"  ><br><br><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <input readonly="true" id="num"><br><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input readonly="true" id="email"><br><br>
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input readonly="true" id="add"><br><br><br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="js.html"><input type="submit" value="BACK" /></a>
+</center>
+</div>
+
+<script>
+	document.getElementById('name').value = window.localStorage.getItem('name');
+	document.getElementById('num').value = window.localStorage.getItem('num');
+	document.getElementById('email').value = window.localStorage.getItem('email');
+    document.getElementById('add').value = window.localStorage.getItem('add');
+</script>
+
+</body>
+</html>
+
